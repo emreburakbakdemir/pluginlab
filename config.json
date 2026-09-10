@@ -1,0 +1,12 @@
+{
+    "notifiers" : [
+        { "name": "file", "config": { "path": "builds.log" } },
+        { "name": "console" },
+        { "name": "console" , "config": { "prefix": "[selam]" }},
+        { "name": "exec", "config": {
+            "command": "./test_scripts/json_ok.sh",
+            "transport": "json",
+            "timeout": 1
+        } }
+    ]
+}
