@@ -3,10 +3,12 @@
         { "name": "file", "config": { "path": "builds.log" } },
         { "name": "console" },
         { "name": "console" , "config": { "prefix": "[selam]" }},
-        { "name": "exec", "config": {
-            "command": "./test_scripts/json_ok.sh",
-            "transport": "json",
-            "timeout": 1
-        } }
+        { "name": "exec" , "config": {
+            "command": "./test_scripts/slack_example.sh",
+            "transport": "env",
+            "timeout": 5,
+            "env":              { "CHANNEL": "#builds" },
+            "env_from_host":    { "SLACK_TOKEN": "EXAMPLE_SLACK_TOKEN" }
+        }}
     ]
 }
